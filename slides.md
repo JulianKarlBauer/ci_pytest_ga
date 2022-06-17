@@ -160,7 +160,7 @@ If you would like to use Pytest on your local machine, please
     - Navigate to your preferred location on your hard disk and open a terminal
     - Type `git clone <your-HTTPS-URL>` with <your-HTTPS-URL> replaced by your URL
 - Install Python, e.g., using [Anaconda](https://www.anaconda.com/products/distribution) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-- Consider creating a [virtual environment](url_conda_env_manager)
+- Consider creating a [virtual environment][url_conda_env_manager]
 - Install pytest using either `pip` or `conda`
     - `pip install pytest`
     - `conda install -c anaconda pytest`
