@@ -197,7 +197,6 @@ If you would like to use Pytest on your local machine, please
 ```
 workshop_ci_pytest
 │   README.md
-│
 │   functions.py
 ```
 ::::
@@ -214,318 +213,56 @@ def add(x, y):
 
 :::
 
-# Exercise 2: Refactor a Script into a Package
 
-**Toy problem**:  
-Get compression modulus $K$ and shear modulus $G$ of an isotropic material  
-based on Young's modulus $E=10 \text{GPa}$ and Poisson's ratio $\nu=0.3$
-
-
-# Solution 2: Script [`s001_get_KG.py`](https://git.scc.kit.edu/IRTG2078/workshop_thomashof_2021/cpc_jb_template/-/blob/main/s001_get_KG.py)
-
-```python
-import mechkit
-young = 10
-poisson = 0.3
-
-mat = mechkit.material.Isotropic(E=young, v=poisson)
-compression = mat.K
-shear = mat.G
-
-print('K=', compression)
-print('G=', shear)
-```
-
-
-# Exercise 2: Refactor a Script into a Package
+# Exercise 4: Write a test for `functions.add()`
 
 ::: columns
 
-:::: {.column width=0.5}
-- Script approach
-- Refactor into a function
-- Refactor into Python project structure
-- Make it a Python package
-- [Publish on Package Index, e.g., PyPi]
-- [Archive on Zenodo]
-
-::::
-
-:::: {.column width=0.5}
-- Not reusable
-- Reusable within the script
-- Reusable within the project
-- Reusable across projects
-- Reusable within the community
-- Reusable for a long time
-
-::::
-
-:::
-
-
-# Solution 2: Function in `s001_get_KG.py`
-
-```python
-import mechkit
-young = 10
-poisson = 0.3
-
-def KGbyEV(E, v):
-    mat = mechkit.material.Isotropic(E=E, v=v)
-    return (mat.K, mat.G)
-
-compression, shear =  KGbyEV(E=young, v=poisson)
-
-print('K=', compression)
-print('G=', shear)
+:::: {.column width=0.45}
 ```
-
-
-# Solution 2: Python Project Structure
-
-::: columns
-
-:::: {.column width=0.25}
-```
-cooperative_python_coding
+workshop_ci_pytest
 │   README.md
-│   s001_get_KG.py
-│   
-└───toy_package
-│    │   __init__.py
-│    │   material.py
+│   functions.py
+└───test
+│    │   test_functions.py
 ```
 ::::
 
-:::: {.column width=0.35}
-### `s001_get_KG.py`
+:::: {.column width=0.45}
+### `test_functions.py`
 
 ```python
-import toy_package
-young = 10
-poisson = 0.3
+from functions import add
 
-compression, shear = (
-    toy_package.material.KGbyEV(
-        E=young, v=poisson)
-    )
-
-print('K=', compression)
-print('G=', shear)
-```
-::::
-
-:::: {.column width=0.3}
-### `toy_package/__init__.py`
-
-```python
-from . import material
+def test_add():
+    assert add(3,4) == 7
 ```
 
-### `toy_package/material.py`
-
-```python
-from mechkit import material
-
-Iso = material.Isotropic
-
-def KGbyEV(E, v):
-    mat = Iso(E=E, v=v)
-    return (mat.K, mat.G)
-```
 ::::
 
 :::
 
+&nbsp;
 
-
-# Solution 2: Python Package
+and (**optional**) run this test with pytest on your local machine
 
 ::: columns
 
-:::: {.column width=0.25}
+:::: {.column width=0.45}
 ```
-cooperative_python_coding
-│   README.md
-│   setup.py
-│   s001_get_KG.py
-│   
-└───toy_package
-│    │   __init__.py
-│    │   material.py
-```
-
-&nbsp;
-
-Installation command
-```
-python setup.py develop
+python -m pytest
 ```
 ::::
 
-:::: {.column width=0.35}
-### `setup.py`
+:::: {.column width=0.45}
 
-```python
-import setuptools
 
-setuptools.setup(
-  name="toy_package",
-  version="0.0.1",
-  author="Julian Karl Bauer",
-  author_email="...",
-  description="Does nothing",
-  packages=["toy_package"],
-  install_requires=["mechkit",],
-  ...
-)
-```
-::::
-
-:::: {.column width=0.3}
-### `s001_get_KG.py`
-see previous slide
-
-### `toy_package/__init__.py`
-see previous slide
-
-### `toy_package/material.py`
-see previous slide
 ::::
 
 :::
 
 
-# Reusability
 
-::: columns
-
-:::: {.column width=0.3}
-- Script
-- Function / class / object
-- Importable file
-- Local package
-- Published package
-- Zenodo DOI
-
-::::
-
-:::: {.column width=0.7}
-- Not reusable
-- Reusable within the script
-- Reusable within the project
-- Reusable across projects
-- Reusable within the community
-- Reusable for a long time
-
-::::
-:::
-
-&nbsp;
-
-Reusability is directly connected to  
-the [DRY-principle][urldry] (Don't Repeat Yourself)  
-and therefore a step towards [clean code][urlcleancode].
-
-<!-- # Don't Repeat Yourself (DRY)
-Reusability is one step towards dry code -->
-
-# Exercise 3: Use `toy_package` in New Environment
-
-- Create and activate a new environment `cpc_env2`
-- Install `toy_package` into new `cpc_env2`
-- Change directory to `Desktop`
-- Start Python session and import `toy_package` from anywhere
-
-# Solution 3: Use `toy_package` in New Environment
-
-```
-conda create -n cpc_env2 python=3.9
-conda activate cpc_env
-python setup.py develop
-cd ~/Desktop
-conda install ipython
-ipython
-import toy_package
-```
-
-# [Imports][urlimports1]
-
-::: columns
-
-:::: {.column width=0.5}
-```python
-from toy_package import *
-# Attention:
-# `import *` is nearly never what you want.
-# This command overwrites local variables
-# if an equally named variable exists
-# within `toy_package`
-```
-
-```python
-import toy_package
-from toy_package import material
-from toy_package import material as mymat
-```
-
-<!-- &nbsp;
-See also [[1]][urlimports1], [[2]][urlimports2] -->
-::::
-
-:::: {.column width=0.5}
-Emulate lean module using imports
-
-### `toy_package/__init__.py`
-```python
-# Skip `material` in import cascade
-from .material import *
-```
-
-### `s001_get_KG.py`
-
-```python
-import toy_package
-...
-compression, shear = (
-    toy_package.KGbyEV(E, v)
-    )
-...
-```
-
-::::
-
-:::
-
-# Getting Professional on Python Package Structure
-- Someone wrote a package ([Cookiecutter][urlcookiecutter]) which sets up package project structures...
-- Someone wrote a package ([Cookiecutter-PyPackage][urlcookiecutterpypackage]) which defines a template for [Cookiecutter][urlcookiecutter]...
-
-&nbsp;
-
-### Use Cookiecutter to set up a Python project
-
-```bash
-pip install -U cookiecutter
-cookiecutter https://github.com/audreyfeldroy/cookiecutter-pypackage.git
-```
-
-# Cookiecutter Example
-
-::: columns
-
-:::: {.column width=0.65}
-![Usage][figccookie_in]
-
-::::
-
-:::: {.column width=0.35}
-![Result][figccookie_out]
-
-::::
-
-:::
 
 # Tests
 
