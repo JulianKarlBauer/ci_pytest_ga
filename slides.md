@@ -18,10 +18,6 @@ classoption: "aspectratio=169"
 urlcolor: brown
 ---
 
-# Original Slides
-
-### Origin
-This presentation is in large parts based on "Introduction to automated testing" by Nils Meyer.
 
 
 # Motivation
