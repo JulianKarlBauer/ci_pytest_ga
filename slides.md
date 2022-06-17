@@ -76,6 +76,27 @@ When do we need it?
 :::
 
 
+# More on Tests
+
+A test is a procedure which prepares and performs a comparison.
+
+&nbsp;
+
+A comparison
+
+- is done between calculated values and (known) expectation,
+- yields a boolean result,
+- requires specification of a tolerance if non-integer entities are compared.
+
+&nbsp;
+
+Any conditional expression which evaluates to
+
+- `True` if something works as expected and
+- `False` otherwise, can be turned into a test.
+
+
+
 # Pytest: Unit Tests in Python
 ::: columns
 
@@ -260,30 +281,6 @@ python -m pytest
 ::::
 
 :::
-
-
-
-
-# More on Tests
-
-A test is a procedure which prepares and performs a comparison.
-
-&nbsp;
-
-A comparison
-
-- is done between calculated values and (known) expectation,
-- yields a boolean result,
-- requires specification of a tolerance if non-integer entities are compared.
-
-&nbsp;
-
-Any conditional expression which evaluates to
-
-- `True` if something works as expected and
-- `False` otherwise, can be turned into a test.
-
-
 
 
 
