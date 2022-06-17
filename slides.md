@@ -34,10 +34,78 @@ You will see my screen and you are encouraged to follow the steps on your local 
 [^notecarpentriescodeofconduct]: <https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html>
 
 
-
 # Motivation
 
 ![Avoid breaking things (© Nils Meyer)][fig_motivation_changes_nm]
+
+
+
+# Unit Tests
+::: columns
+
+:::: {.column width=1.0}
+**Unit tests** are code snippets which *test* small *units* of our code.
+
+&nbsp;
+
+Why do we need it?
+
+- To ensure that all parts of our code run as expected
+- To ensure that changes do not break old functionality
+
+&nbsp;
+
+When do we need it?
+
+- Refactoring code
+- Working with multiple contributors / authors
+- Deployment for end users which do random stuff
+- Always - at least, if we are interested in successful long-term projects -
+
+::::
+
+:::
+
+
+# Pytest: Unit Tests in Python
+::: columns
+
+:::: {.column width=0.6}
+[**Pytest**][url_pytest] is
+
+- a Python package
+- a command line tool
+- "a framework" ... "which can scale to support complex functional testing for applications and libraries"[^notepytest]
+
+[^notepytest]: <https://docs.pytest.org/en/latest/>
+
+
+&nbsp;
+
+Why do we need it?
+
+- It simplifies
+    - writing,
+    - collecting,
+    - executing and
+    - reporting on tests
+
+::::
+
+:::: {.column width=0.3}
+
+How do we get it?
+
+- `pip install pytest`
+- `conda install -c anaconda pytest`
+
+&nbsp;
+
+![][fig_pytest_logo]
+
+::::
+
+:::
 
 
 # Exercise 0: Git Project
@@ -831,6 +899,12 @@ git diff .
 
 [figThankYou]: latexRessources/thank_you_slide.png
 [fig_motivation_changes_nm]: images/motivation_changes_nm.png { width=14cm }
+[fig_pytest_logo]: images/pytest.png { width=4cm }
+
+[url_thesoftwarecarpentries]: https://software-carpentry.org/
+[url_pytest]: https://docs.pytest.org/en/latest/
+
+
 
 
 [figEnvironments]: images/environments.png { width=7cm }
@@ -841,7 +915,6 @@ git diff .
 [figccookie_out]: images/cookie_out.png { height=5.5cm }
 
 [condacheatsheet]: https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf
-[url_thesoftwarecarpentries]: https://software-carpentry.org/
 [pytest]: https://docs.pytest.org/en/6.2.x/
 [pytestfixtures]: https://docs.pytest.org/en/6.2.x/fixture.html
 [unittests_tests_that_last]: https://osherove.com/blog/2007/9/13/throw-away-tests-vs-tests-that-last.html
