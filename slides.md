@@ -580,6 +580,50 @@ def test_add(x, y, result):
 
 :::
 
+# Exercise 10: Combinations of OS and Versions
+
+Create a workflow which echos combinations of operating systems (OS) combinations and version specifiers.
+
+<!-- &nbsp; -->
+
+::: columns
+
+:::: {.column width=0.24}
+\scriptsize
+```
+workshop_ci_pytest
+└───.github
+|   └───workflows
+|       | ...
+|       | os_version_matrix.yml
+|
+│   README.md
+| ...
+```
+::::
+
+:::: {.column width=0.69}
+### `pytest_multi.yml`
+
+\small
+```yaml
+name: Operating system matrix
+on: [push]
+jobs:
+  os_matrix:
+    runs-on: ubuntu-latest # ${{ matrix.os }}
+    strategy:
+      matrix:
+        version: [10, 12, 14]
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - run: echo "os=${{ matrix.os }}, version=${{ matrix.version }}"
+```
+
+::::
+
+:::
+
 
 # More on CI
 
@@ -588,7 +632,6 @@ def test_add(x, y, result):
 - [Test Jupyter notebooks](https://semaphoreci.com/blog/test-jupyter-notebooks-with-pytest-and-nbmake)
 - Include Pytest into a Python Package Project Structure with `setup.py`
 - [Publish Python Package to PyPi](https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/)
-
 
 
 
