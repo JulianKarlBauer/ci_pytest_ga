@@ -374,8 +374,8 @@ you can also instruct a skilled user and your future-self.
 
 [Github Actions][url_github_actions]
 
-- Free version: 2000 free CI-minutes/month
 - Batteries included
+- Free version: 2000 free CI-minutes/month
 
 
 ::::
