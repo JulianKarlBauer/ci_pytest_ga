@@ -551,6 +551,46 @@ jobs:
 [fig_github_actions_features]: images/github_actions_features.png { width=12cm }
 
 
+# Exercise 9: Parametrize `functions.add()`
+
+Try to run one test against multiple expectation without introducing redundancy.
+
+::: columns
+
+:::: {.column width=0.45}
+### `test_functions.py`
+
+```python
+from functions import add
+import pytest
+
+@pytest.mark.parametrize(
+    "x, y, result", [(1,2,3), (3,4,7)]
+    )
+def test_add(x, y, result):
+    assert add(x, y) == result
+```
+::::
+
+:::: {.column width=0.45}
+
+![][fig_output_parametrize_test_functions]
+
+::::
+
+:::
+
+
+
+[fig_output_parametrize_test_functions]: images/output_parametrize_test_functions.png { width=7cm }
+
+
+
+
+
+
+
+
 
 # Thank You for Your Attention
 ![fig_Thank_You] \
