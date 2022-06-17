@@ -625,7 +625,7 @@ jobs:
 :::
 
 
-# More on CI
+# More CI Topics
 
 - Create and use [artefacts](https://github.com/actions/upload-artifact)
 - [Compile Latex documents](https://github.com/dante-ev/latex-action)
@@ -634,6 +634,127 @@ jobs:
 - [Publish Python Package to PyPi](https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/)
 
 
+# Exercise 11: Open Journal Paper Build
+
+::: columns
+
+:::: {.column width=0.35}
+\scriptsize
+```
+workshop_ci_pytest
+└───.github
+|   └───workflows
+|       | ...
+|       | paper.yml
+|
+│ README.md
+| paper.md
+| paper.bib
+```
+::::
+
+:::: {.column width=0.55}
+### `paper.yml`
+
+\scriptsize
+```yaml
+on: [push]
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    name: Paper Draft
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build draft PDF
+        uses: openjournals/openjournals-draft-action@master
+        with:
+          journal: joss
+          paper-path: paper.md
+      - name: Upload
+        uses: actions/upload-artifact@v1
+        with:
+          name: paper
+          path: paper.pdf
+```
+
+::::
+
+:::
+
+# Exercise 11: Open Journal Paper Build
+
+::: columns
+
+:::: {.column width=0.45}
+### `paper.md`
+\tiny
+```markdown
+---
+title: 'title'
+tags:
+  - Python
+authors:
+  - name: Julian Karl Bauer^[corresponding author]
+    orcid: 0000-0002-4931-5869
+    affiliation: "1"
+affiliations:
+ - name: Institute of Mechanics, Karlsruhe Institute of Technology (KIT), Germany
+   index: 1
+date: 22 June 2022
+bibliography: paper.bib
+---
+
+# Summary
+
+text text text text [@Bauer2022]
+
+# Statement of need
+text `text` **text** *text*
+
+## Sub section
+
+# Acknowledgements
+
+# References
+
+```
+::::
+
+:::: {.column width=0.45}
+### `paper.bib`
+
+\tiny
+```bibtex
+@article{Bauer2022,
+    title={Variety of fiber orientation tensors},
+    author={Bauer, Julian Karl and B{\"o}hlke, Thomas},
+    journal={Mathematics and Mechanics of Solids},
+    publisher={SAGE Publications Sage UK: London, England},
+    doi          = {10.1177/10812865211057602},
+    volume = {27},
+    number = {7},
+    pages = {1185-1211},
+    year = {2022},
+}
+```
+
+::::
+
+:::
+
+
+# Exercise 11: Open Journal Paper Build
+
+::: columns
+:::: {.column width=0.55}
+![][fig_artefact_download]
+::::
+:::: {.column width=0.35}
+$\quad\quad\quad\quad$
+![][fig_paper_view]
+::::
+:::
 
 
 
@@ -653,6 +774,9 @@ jobs:
 [fig_github_actions_pytest_multiple]: images/github_actions_pytest_multiple.png { width=14cm }
 [fig_github_actions_features]: images/github_actions_features.png { width=12cm }
 [fig_output_parametrize_test_functions]: images/output_parametrize_test_functions.png { width=7cm }
+[fig_artefact_download]: images/artefact_download.png { width=10cm }
+[fig_paper_view]: images/paper_view.png { width=3.7cm }
+
 
 
 [url_the_software_carpentries]: https://software-carpentry.org/
