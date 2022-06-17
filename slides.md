@@ -276,7 +276,7 @@ If you would like to use Pytest on your local machine, please
 
 - The Python project structure contains a directory named `test`.
 - Inside this `test` directory, (unit) tests can be structured in files, classes and functions.
-- Files, classes and functions which contain tests have to follow a naming convention and start with the prefix `test`.
+- Files, classes and functions which contain tests have to follow a naming convention and should start with the prefix `test`.
 - Helper functions and [fixtures][url_pytest_fixtures] can be used to parameterize tests and keep the
 test code dry.
 
