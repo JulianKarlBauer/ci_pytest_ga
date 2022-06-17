@@ -348,154 +348,61 @@ project_name
   - against local files with **python -m pytest**.
 
 
-# Continuous Integration [(CI)][urlci]
-- CI helps to
-   - document settings and
-   - automate repetitive tasks (e.g. running tests),
-    which might be skipped otherwise.
-- CI acts as a kind of [hallway test][hallwaytest]...   
+# Automate Tests
+
+![© Nils Meyer][fig_motivation_changes_nm]
+
+
+# Continuous Integration [(CI)][url_ci]
+
+Automating the integration of code changes from multiple contributors into a single software project.
+
+- Avoid broken code
+- Avoid annoying repetitive manual tasks
+- Document settings
+- Act as a kind of [hallway test][url_hallwaytest]...
 if you tell CI what to do,
 you can also instruct a skilled user and your future-self.
 
 &nbsp;
 
-[Gitlab-CI][urlgitlabci]
-
-- Specify todos in `.gitlab-ci.yml`
-  - [Example gallery][gitlabciexamples]
-- Enable a [Gitlab-runner][gitlabrunner]
-- Output can be stored as [artefact][gitlabartefacts] and accessed by URL
-
-
-# Exercise 5: Run Pytest with Gitlab-CI
-- Create `.gitlab-ci.yml`
-- Add simple test stage
-- Push to remote
-- Check if group runner is enabled
-- Watch pipeline execution
-
-# Solution 5: Run Pytest with Gitlab-CI
-
-::: columns
-
-:::: {.column width=0.4}
-### .gitlab-ci.yml
-```yml
-stages:
-  - test
-
-test_3.9:
-    stage: test
-    image: "python:3.9"
-    script:
-        - python setup.py install
-        - pip install pytest
-        - pytest --verbose
-```
-::::
-
-:::: {.column width=0.4}
-![Gitlab-CI: Passing tests][gitlabcipython]
-
-::::
-
-:::
-
-# Beautifier: Black
-
-- [Black][black] your code
-  - Improve readability
-  - Avoid discussion on style
-  - Avoid misleading blame results
-    - If someone formats your code contribution,  
-    changes are high that a third person thinks the
-    formatter wrote the code.
-
-::: columns
-
-:::: {.column width=0.45}
-### Original
-```python
-from toy_package.material import KGbyEV
-compr,shear =   KGbyEV(E = 10, v=0.3,)
-
-print('K=', compr)
-print('G=',shear)
-```
-::::
-
-:::: {.column width=0.45}
-### Blacked
-```python
-from toy_package.material import KGbyEV
-
-compr, shear = KGbyEV(
-    E=10,
-    v=0.3,
-)
-
-print("K=", compr)
-print("G=", shear)
-```
-::::
-
-:::
-
-
-# Exercise 6: Black your Project
-- Commit your current project state
-- Install black  
-- Black a singel file
-- Black the complete directory
-- Search for a plug-in for your editor
-   - [Atom][urlatomblack]
-- Think about [pre-commit][urlprecommit]
-
-# Solution 6: Black your Project
+**Git-based Options**
 
 ::: columns
 
 :::: {.column width=0.45}
 
-### Save
+[Github Actions][url_github_actions]
 
-```
-git add *
-git commit -m 'save current state'
-```
+- Free version: 2000 free CI-minutes/month
+- Batteries included
 
-### Install
-
-```
-pip install black
-```
 
 ::::
 
 :::: {.column width=0.45}
+[Gitlab-CI][url_gitlab_ci]
 
-### Single file
-
-```
-black s001_get_KG.py
-git diff s001_get_KG.py
-```
-
-### Directory
-
-```15
-black .
-git diff .
-```
+- [KIT-Gitlab][url_gitlab_kit] requires registration as employee or student
+- No Batteries (Users have to install [Gitlab-runner][url_gitlab_runner])
 
 ::::
 
 :::
 
 
-<!-- # Formatting Tools and Checks
-- [Black][black]
-- [pre-commit][precommit] -->
+
+[url_hallwaytest]: https://www.techopedia.com/definition/30678/hallway-usability-testing
+[url_ci]: https://en.wikipedia.org/wiki/Continuous_integration
+[url_github_actions]: https://docs.github.com/en/actions
+[url_gitlab_ci]: https://docs.gitlab.com/ee/ci/
+[url_gitlab_kit]: https://git.scc.kit.edu/users/sign_in
+
+[url_gitlab_runner]: https://docs.gitlab.com/runner/
+
+
+
+
 
 # Thank You for Your Attention
 ![figThankYou] \
@@ -531,11 +438,9 @@ git diff .
 [unittests_tests_that_last]: https://osherove.com/blog/2007/9/13/throw-away-tests-vs-tests-that-last.html
 [unittests_throwaway]: https://medium.com/ngconf/you-should-throw-away-your-unit-tests-717c6884a77b
 [unittests_discussion]: https://softwareengineering.stackexchange.com/questions/147055/when-is-unit-testing-inappropriate-or-unnecessary/147075
-[hallwaytest]: https://www.techopedia.com/definition/30678/hallway-usability-testing
 [black]: https://github.com/psf/black
 [urlprecommit]: https://pre-commit.com/
 [gitlabciexamples]: https://docs.gitlab.com/ee/ci/examples/index.html
-[gitlabrunner]: https://docs.gitlab.com/runner/
 [gitlabartefacts]: https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html
 [urlvenv]: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
 [urlvenvpython]: https://docs.python.org/3/tutorial/venv.html
@@ -547,8 +452,7 @@ git diff .
 
 [urlimports1]: https://docs.python.org/3/reference/import.html
 [urlimports2]: https://realpython.com/python-import/
-[urlci]: https://en.wikipedia.org/wiki/Continuous_integration
-[urlgitlabci]: https://docs.gitlab.com/ee/ci/
+
 
 [urlcookiecutter]: https://github.com/cookiecutter/cookiecutter
 [urlcookiecutterpypackage]: https://github.com/audreyfeldroy/cookiecutter-pypackage
