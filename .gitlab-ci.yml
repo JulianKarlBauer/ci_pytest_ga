@@ -1,0 +1,25 @@
+stages:
+  - build
+  - test
+
+slides:
+    stage: build
+    image: aergus/latex
+    # Supports both pandoc and latexmk
+    script:
+        - make build
+    artifacts:
+        when: always
+        paths:
+        - ./slides.pdf
+
+test_3.9:
+    stage: test
+    image: "python:3.9"
+    script:
+        - cd cooperative_python_coding
+        - python setup.py install
+        - pip install pytest
+        - pytest --verbose
+
+
