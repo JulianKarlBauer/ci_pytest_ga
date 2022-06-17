@@ -551,7 +551,7 @@ Inspect the Summary of matrix executions.
 
 # Exercise 9: Parametrize `functions.add()`
 
-Try to run one test against multiple expectation without introducing redundancy.
+Try to run one test against multiple expectations without introducing redundancy.
 
 ::: columns
 
