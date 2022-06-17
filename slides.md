@@ -33,6 +33,7 @@ You see my screen and are encouraged to follow the steps on your local machine.
 
 [^notecarpentriescodeofconduct]: <https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html>
 
+
 # Cooperative Markdown Document
 
 Please find a shared document at [https://hackmd.io/V32-TzF_TzCOM9IXTvP4IA](https://hackmd.io/V32-TzF_TzCOM9IXTvP4IA)  
@@ -146,9 +147,6 @@ $\quad\quad\quad\quad$  ![][fig_github_login]
 
 
 
-[url_github]: https://github.com/
-[fig_github_login]: images/github_login.png { width=8cm }
-
 
 # Exercise 1: Create a New Git Repository
 
@@ -173,7 +171,6 @@ On [Github][url_github], create a new repository with
 
 :::
 
-[fig_new_repo]: images/new_repo.png { width=8cm }
 
 
 
@@ -266,9 +263,6 @@ If you would like to use Pytest on your local machine, please
 ::::
 
 :::
-
-[fig_github_clone]: images/github_clone.png { width=5cm }
-[url_conda_env_manager]: https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
 
 
@@ -377,14 +371,6 @@ you can also instruct a skilled user and your future-self.
 :::
 
 
-[url_hallwaytest]: https://www.techopedia.com/definition/30678/hallway-usability-testing
-[url_ci]: https://en.wikipedia.org/wiki/Continuous_integration
-[url_github_actions]: https://docs.github.com/en/actions
-[url_gitlab_ci]: https://docs.gitlab.com/ee/ci/
-[url_gitlab_kit]: https://git.scc.kit.edu/users/sign_in
-
-[url_gitlab_runner]: https://docs.gitlab.com/runner/
-
 
 # YAML Ain't Markup Language™
 
@@ -451,14 +437,10 @@ jobs:
 
 :::
 
-[fig_hello_world_output]: images/hello_world_output.png { width=4cm }
-
 
 # Exercise 6: Inspect Executed Github Actions
 
 ![][fig_github_actions_overview]
-
-[fig_github_actions_overview]: images/github_actions_overview.png { width=10cm }
 
 
 # Exercise 7: Run Pytest in Github Actions
@@ -561,14 +543,10 @@ Inspect the Summary of matrix executions.
 
 ![][fig_github_actions_pytest_multiple]
 
-[fig_github_actions_pytest_multiple]: images/github_actions_pytest_multiple.png { width=14cm }
 
 # Learn More on [Github Actions][url_github_actions]
 
-
 ![][fig_github_actions_features]
-
-[fig_github_actions_features]: images/github_actions_features.png { width=12cm }
 
 
 # Exercise 9: Parametrize `functions.add()`
@@ -601,11 +579,12 @@ def test_add(x, y, result):
 :::
 
 
+# More on CI
 
-[fig_output_parametrize_test_functions]: images/output_parametrize_test_functions.png { width=7cm }
-
-
-
+- Create and use [artefacts](https://github.com/actions/upload-artifact)
+- [Compile Latex documents](https://github.com/dante-ev/latex-action)
+- [Test Jupyter notebooks](https://semaphoreci.com/blog/test-jupyter-notebooks-with-pytest-and-nbmake)
+- [Publish Python Package to PyPi](https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/)
 
 
 
@@ -620,6 +599,14 @@ def test_add(x, y, result):
 [fig_Thank_You]: latexRessources/thank_you_slide.png
 [fig_motivation_changes_nm]: images/motivation_changes_nm.png { width=14cm }
 [fig_pytest_logo]: images/pytest.png { width=4cm }
+[fig_github_login]: images/github_login.png { width=8cm }
+[fig_new_repo]: images/new_repo.png { width=8cm }
+[fig_github_clone]: images/github_clone.png { width=5cm }
+[fig_hello_world_output]: images/hello_world_output.png { width=4cm }
+[fig_github_actions_overview]: images/github_actions_overview.png { width=10cm }
+[fig_github_actions_pytest_multiple]: images/github_actions_pytest_multiple.png { width=14cm }
+[fig_github_actions_features]: images/github_actions_features.png { width=12cm }
+[fig_output_parametrize_test_functions]: images/output_parametrize_test_functions.png { width=7cm }
 
 
 [url_the_software_carpentries]: https://software-carpentry.org/
@@ -629,6 +616,15 @@ def test_add(x, y, result):
 [url_unit_tests_throw_away]: https://medium.com/ngconf/you-should-throw-away-your-unit-tests-717c6884a77b
 [url_unit_tests_discussion]: https://softwareengineering.stackexchange.com/questions/147055/when-is-unit-testing-inappropriate-or-unnecessary/147075
 [url_test_driven_dev]: https://en.wikipedia.org/wiki/Test-driven_development
+[url_github]: https://github.com/
+[url_conda_env_manager]: https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+[url_hallwaytest]: https://www.techopedia.com/definition/30678/hallway-usability-testing
+[url_ci]: https://en.wikipedia.org/wiki/Continuous_integration
+[url_github_actions]: https://docs.github.com/en/actions
+[url_gitlab_ci]: https://docs.gitlab.com/ee/ci/
+[url_gitlab_kit]: https://git.scc.kit.edu/users/sign_in
+[url_gitlab_runner]: https://docs.gitlab.com/runner/
+
 
 
 
