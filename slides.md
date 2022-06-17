@@ -129,7 +129,7 @@ $\quad\quad\quad\quad$  ![][fig_github_login]
 [fig_github_login]: images/github_login.png { width=8cm }
 
 
-# Exercise 1: Create a new Git repository
+# Exercise 1: Create a New Git Repository
 
 ::: columns
 
@@ -155,7 +155,7 @@ On [Github][url_github], create a new repository with
 [fig_new_repo]: images/new_repo.png { width=8cm }
 
 
-# Exercise 2: (Optional) Clone repository, install pytest
+# Exercise 2: (Optional) Clone Repository, Install pytest
 
 ::: columns
 
@@ -189,7 +189,7 @@ If you would like to use Pytest on your local machine, please
 
 
 
-# Exercise 3: Define a simple Python function
+# Exercise 3: Define a Simple Python Function
 
 ::: columns
 
@@ -214,7 +214,7 @@ def add(x, y):
 :::
 
 
-# Exercise 4: Write a test for `functions.add()`
+# Exercise 4: Write a Test for `functions.add()`
 
 ::: columns
 
@@ -264,22 +264,29 @@ python -m pytest
 
 
 
-# Tests
+# More on Tests
 
-- Coding involves verification.
-- Verification involves comparisons between calculated values and (known) expectation.
-- A single comparison yields a boolean result.  
-`result = comparison(value, expectation)`
-- Comparisons of non integer numbers usually require specification of a tolerance.
+A test is a procedure which prepares and performs a comparison.
 
 &nbsp;
 
-- A test is a procedure which prepares and performs a comparison.
-- A test either passes or fails.
-- Any conditional expression which evaluates to
-`True` if something works as expected
-and `False` otherwise,
-can be turned into a test.
+A comparison
+
+- is done between calculated values and (known) expectation,
+- yields a boolean result,
+- requires specification of a tolerance if non-integer entities are compared.
+
+&nbsp;
+
+Any conditional expression which evaluates to
+
+- `True` if something works as expected and
+- `False` otherwise, can be turned into a test.
+
+
+
+
+
 
 # Tests in Python
 
