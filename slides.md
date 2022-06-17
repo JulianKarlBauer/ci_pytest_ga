@@ -543,6 +543,12 @@ jobs:
 
 [fig_github_actions_pytest_multiple]: images/github_actions_pytest_multiple.png { width=14cm }
 
+# Learn More on [Github Actions][url_github_actions]
+
+
+![][fig_github_actions_features]
+
+[fig_github_actions_features]: images/github_actions_features.png { width=12cm }
 
 
 
