@@ -504,7 +504,7 @@ workshop_ci_pytest
 ```
 ::::
 
-:::: {.column width=0.55}
+:::: {.column width=0.45}
 ### `pytest_multi.yml`
 
 \tiny
