@@ -288,33 +288,7 @@ Any conditional expression which evaluates to
 
 
 
-# Tests in Python
-
-::: columns
-
-:::: {.column width=0.5}
-
-- In Python, a test is a piece of code (usually a function)
-which asserts that something is true.
-- A test usually ends with the pattern  
-`assert result`  
-where the `assert`-statement
-   - does nothing if `result is True` and
-   - raises an exception of type `AssertionError` otherwise.
-
-::::
-
-:::: {.column width=0.5}
-```python
-def test_case_xy_func_foobaa():
-    value = ...
-    assert comparison(value, expectation)
-```
-::::
-
-:::
-
-# Tests in Python
+# Tests in the Python Project Structure
 
 ::: columns
 
@@ -353,98 +327,26 @@ project_name
 
 :::
 
-# Test Runner: [pytest][pytest]
+# Running Pytest
 
-- A test runner
-  - inspects the project and collects tests
-  - executes the collected tests
-  - summarizes the test results
-- [Pytest][pytest] is a convenient choice for small projects.
+- [Pytest][pytest] can be executed from the command line either
+  - as a command by **pytest**
+  - or as a Python package by **python -m pytest**
 
 &nbsp;
 
-- [Pytest][pytest] can be executed from the command line either
-  - as a command by `pytest`
-  - or as a Python package by `python -m pytest`
 - Execution as a Python package
   adds the current working directory of the terminal
   to the Python path which is used during the pytest run.
   In consequence, import-precedence
   leads to an import of the local source code, if present.
-- Run tests
-  - against an installed package with `pytest`
-  - against local files with `python -m pytest`
 
-<!-- either with or without
-adding the current directory to the Python path which is used during the pytest run.
-- If the current directory is added to the Python path, import-precedence
-leads to an import of the local source code, if present in the current directory.
-This can be done by  
-`python -m pytest`
-- If pytest is executed by  
-`pytest`  
-the package which should be tested has to be installed in the current environment and
-the tests then run against the installed package. -->
+&nbsp;
 
-# Exercise 4: Write and Execute a Test
+- Within a Python project structure, run tests
+  - against an installed package with **pytest** (recommended) or
+  - against local files with **python -m pytest**.
 
-- Write a unit test which tests whether `KGbyEv(E=10,v=0)` yields $K=10/3$ and $G=10/2$.
-- Execute the test against the local source code files.
-- Identify required packages.
-
-# Solution 4: Write and Execute a Test
-
-::: columns
-
-:::: {.column width=0.25}
-```
-cooperative_python_coding
-│   README.md
-│   s001_get_KG.py
-│   
-└───toy_package
-│    │   __init__.py
-│    │   material.py
-│   
-└───test
-│    │   test_material.py
-```
-::::
-
-:::: {.column width=0.45}
-### [`test_material.py`](https://git.scc.kit.edu/IRTG2078/workshop_thomashof_2021/cpc_jb_template/-/blob/main/test/test_material.py)
-
-```python
-import toy_package
-import numpy as np
-
-def test_KGbyEv_single_values():
-    young = 10
-
-    func = toy_package.material.KGbyEV
-
-    assert np.allclose(
-        func(E=young, v=0.0),
-        (young / 3., young / 2.),
-        )
-
-```
-::::
-
-:::: {.column width=0.22}
-### Install pytest
-```
-conda install pytest
-```
-
-### Run pytest
-```
-python -m pytest
-```
-
-::::
-
-:::
 
 # Continuous Integration [(CI)][urlci]
 - CI helps to
