@@ -146,6 +146,37 @@ On [Github][url_github], create a new repository with
 [fig_new_repo]: images/new_repo.png { width=8cm }
 
 
+# Exercise 2: (Optional) Clone repository, install pytest
+
+::: columns
+
+:::: {.column width=0.6}
+
+If you would like to use Pytest on your local machine, please
+
+- Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Clone your repo
+    - In your repo on Github, click `Clone`, `HTTPS` and copy the URL (see screenshot)
+    - Navigate to your preferred location on your hard disk and open a terminal
+    - Type `git clone <your-HTTPS-URL>` with <your-HTTPS-URL> replaced by your URL
+- Install Python, e.g., using [Anaconda](https://www.anaconda.com/products/distribution) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+- Consider creating a [virtual environment](url_conda_env_manager)
+- Install pytest using either `pip` or `conda`
+    - `pip install pytest`
+    - `conda install -c anaconda pytest`
+
+::::
+
+:::: {.column width=0.3}
+
+![Get HTTPS address][fig_github_clone]
+
+::::
+
+:::
+
+[fig_github_clone]: images/github_clone.png { width=5cm }
+[url_conda_env_manager]: https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
 
 
