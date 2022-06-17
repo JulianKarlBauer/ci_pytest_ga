@@ -267,20 +267,10 @@ def test_add():
 
 and (**optional**) run this test with pytest on your local machine
 
-::: columns
-
-:::: {.column width=0.45}
 ```
 python -m pytest
 ```
-::::
 
-:::: {.column width=0.45}
-
-
-::::
-
-:::
 
 
 
@@ -388,7 +378,6 @@ you can also instruct a skilled user and your future-self.
 :::
 
 
-
 [url_hallwaytest]: https://www.techopedia.com/definition/30678/hallway-usability-testing
 [url_ci]: https://en.wikipedia.org/wiki/Continuous_integration
 [url_github_actions]: https://docs.github.com/en/actions
@@ -398,15 +387,65 @@ you can also instruct a skilled user and your future-self.
 [url_gitlab_runner]: https://docs.gitlab.com/runner/
 
 
+# Exercise 5: Hello World in Github Actions
+
+Create a Github action which printe "Hello World" to the Github actions terminal.
+
+::: columns
+
+:::: {.column width=0.27}
+```
+workshop_ci_pytest
+└───.github
+|   └───workflows
+|   |   | hello_world.yml
+|
+│   README.md
+| ...
+```
+::::
+
+:::: {.column width=0.35}
+### `hello_world.yml`
+
+```yaml
+name: Hello World
+on: [push]
+jobs:
+  Print_Hello_World:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"
+
+```
+
+::::
+
+:::: {.column width=0.27}
+
+![][fig_hello_world_output]
+
+::::
+
+:::
+
+[fig_hello_world_output]: images/hello_world_output.png { width=4cm }
+
+
+# Exercise 6: Inspect Github Actions Runs
+
+![][fig_github_actions_overview]
+
+[fig_github_actions_overview]: images/github_actions_overview.png { width=10cm }
 
 
 
 # Thank You for Your Attention
-![figThankYou] \
+![fig_Thank_You] \
 
 
 
-[figThankYou]: latexRessources/thank_you_slide.png
+[fig_Thank_You]: latexRessources/thank_you_slide.png
 [fig_motivation_changes_nm]: images/motivation_changes_nm.png { width=14cm }
 [fig_pytest_logo]: images/pytest.png { width=4cm }
 
