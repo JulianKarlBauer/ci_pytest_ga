@@ -389,7 +389,11 @@ you can also instruct a skilled user and your future-self.
 
 # Exercise 5: Hello World in Github Actions
 
-Create a Github action which printe "Hello World" to the Github actions terminal.
+Print "Hello World" to the Github actions terminal.
+
+Therefore, create a Github action workflow named "Hello World"
+which contains a job called "Print_Hello_World"
+echoing "Hello World".
 
 ::: columns
 
@@ -398,7 +402,7 @@ Create a Github action which printe "Hello World" to the Github actions terminal
 workshop_ci_pytest
 └───.github
 |   └───workflows
-|   |   | hello_world.yml
+|       | hello_world.yml
 |
 │   README.md
 | ...
@@ -432,11 +436,52 @@ jobs:
 [fig_hello_world_output]: images/hello_world_output.png { width=4cm }
 
 
-# Exercise 6: Inspect Github Actions Runs
+# Exercise 6: Inspect Executed Github Actions
 
 ![][fig_github_actions_overview]
 
 [fig_github_actions_overview]: images/github_actions_overview.png { width=10cm }
+
+
+# Exercise 7: Run Pytest in Github Actions
+
+Create a workflow which runs `pytest` against the current repository state.
+
+::: columns
+
+:::: {.column width=0.3}
+```
+workshop_ci_pytest
+└───.github
+|   └───workflows
+|       | hello_world.yml
+|       | pytest.yml
+|
+│   README.md
+| ...
+```
+::::
+
+:::: {.column width=0.6}
+### `pytest.yml`
+
+```yaml
+name: Unit Tests
+on: [push]
+jobs:
+  Clone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # Make repo available
+      - name: Install pytest
+        run: pip install pytest
+      - name: Execute pytest as module
+        run: python -m pytest -vv
+```
+
+::::
+
+:::
 
 
 
