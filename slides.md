@@ -33,6 +33,15 @@ You will see my screen and you are encouraged to follow the steps on your local 
 
 [^notecarpentriescodeofconduct]: <https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html>
 
+# Cooperative Markdown Document
+
+Please find a shared document at [https://hackmd.io/V32-TzF_TzCOM9IXTvP4IA](https://hackmd.io/V32-TzF_TzCOM9IXTvP4IA)  
+and feel free to contribute with annotations, questions or notes.
+
+$\quad\quad\quad\quad$  ![][fig_hackmd]
+
+[fig_hackmd]: images/hackmd.png { width=8cm }
+
 
 # Motivation
 
@@ -180,42 +189,26 @@ If you would like to use Pytest on your local machine, please
 
 
 
-
-# Python [(Package)][urlpythonpackages] Project [Structure][urlpythonpackagehitchiker]
+# Exercise 3: Define a simple Python function
 
 ::: columns
 
-:::: column
+:::: {.column width=0.45}
 ```
-project_name
+workshop_ci_pytest
 │   README.md
-│   setup.py
 │
-│   [s001_my_fancy_script.py]
-│   [s002_another_fancy_script.py]
-│   ...
-│   
-└───package_name
-│    │   __init__.py
-│    │   module_name_1.py
-│    │   module_name_2.py
-|
-└───test
-│    │   test_module_name_1.py
-│    │   test_module_name_2.py
+│   functions.py
 ```
 ::::
 
-:::: column
-Examples:
+:::: {.column width=0.45}
+### `functions.py`
 
-- [NumPy][urlnumpy]
-- [SciPy][urlscipy]
-- [SymPy][urlsympy]
-
-- [Fiberoripy][urlfiberoripy]
-- [Mechkit][urlmechkit]
-
+```python
+def add(x, y):
+    return x + y
+```
 
 ::::
 
