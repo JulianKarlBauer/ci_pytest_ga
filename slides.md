@@ -23,7 +23,7 @@ urlcolor: brown
 We will solve exercises together by simultaneous live-coding.  
 You will see my screen and you are encouraged to follow the steps on your local machine.
 
-**Code of Conduct** following the [Software Carpentries][url_thesoftwarecarpentries]
+**Code of Conduct** following the [Software Carpentries][url_the_software_carpentries]
 
 - "Use welcoming and inclusive language
 - Be respectful of different viewpoints and experiences
@@ -297,14 +297,14 @@ Any conditional expression which evaluates to
 - The Python project structure contains a directory named `test`.
 - Inside this `test` directory, (unit) tests can be structured in files, classes and functions.
 - Files, classes and functions which contain tests have to follow a naming convention and start with the prefix `test`.
-- Helper functions and [fixtures][pytestfixtures] can be used to parameterize tests and keep the
+- Helper functions and [fixtures][url_pytest_fixtures] can be used to parameterize tests and keep the
 test code dry.
 
 &nbsp;
 
-- [Do][unittests_throwaway] / [Don't][unittests_tests_that_last] throw away tests
- ([discussion][unittests_discussion])
-- [Test-driven development][urltestdrivendev]
+- [Do][url_unit_tests_throw_away] / [Don't][url_unit_tests_that_last] throw away tests
+ ([discussion][url_unit_tests_discussion])
+- [Test-driven development][url_test_driven_dev]
 
 ::::
 
@@ -329,7 +329,7 @@ project_name
 
 # Running Pytest
 
-- [Pytest][pytest] can be executed from the command line either
+- [Pytest][url_pytest] can be executed from the command line either
   - as a command by **pytest**
   - or as a Python package by **python -m pytest**
 
@@ -414,67 +414,14 @@ you can also instruct a skilled user and your future-self.
 [fig_pytest_logo]: images/pytest.png { width=4cm }
 
 
-
-
-[url_thesoftwarecarpentries]: https://software-carpentry.org/
+[url_the_software_carpentries]: https://software-carpentry.org/
 [url_pytest]: https://docs.pytest.org/en/latest/
+[url_pytest_fixtures]: https://docs.pytest.org/en/6.2.x/fixture.html
+[url_unit_tests_that_last]: https://osherove.com/blog/2007/9/13/throw-away-tests-vs-tests-that-last.html
+[url_unit_tests_throw_away]: https://medium.com/ngconf/you-should-throw-away-your-unit-tests-717c6884a77b
+[url_unit_tests_discussion]: https://softwareengineering.stackexchange.com/questions/147055/when-is-unit-testing-inappropriate-or-unnecessary/147075
+[url_test_driven_dev]: https://en.wikipedia.org/wiki/Test-driven_development
 
 
 
 
-
-
-
-[figEnvironments]: images/environments.png { width=7cm }
-[figEnvironmentsSmaller]: images/environments.png { width=5cm }
-[gitlabcipython]: images/gitlabcipython.png { width=7cm }
-
-[figccookie_in]: images/cookie_in.png { height=5.5cm }
-[figccookie_out]: images/cookie_out.png { height=5.5cm }
-
-[condacheatsheet]: https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf
-[pytest]: https://docs.pytest.org/en/6.2.x/
-[pytestfixtures]: https://docs.pytest.org/en/6.2.x/fixture.html
-[unittests_tests_that_last]: https://osherove.com/blog/2007/9/13/throw-away-tests-vs-tests-that-last.html
-[unittests_throwaway]: https://medium.com/ngconf/you-should-throw-away-your-unit-tests-717c6884a77b
-[unittests_discussion]: https://softwareengineering.stackexchange.com/questions/147055/when-is-unit-testing-inappropriate-or-unnecessary/147075
-[black]: https://github.com/psf/black
-[urlprecommit]: https://pre-commit.com/
-[gitlabciexamples]: https://docs.gitlab.com/ee/ci/examples/index.html
-[gitlabartefacts]: https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html
-[urlvenv]: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
-[urlvenvpython]: https://docs.python.org/3/tutorial/venv.html
-[urlcondamanager]: https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
-[urlpipenv]: https://pypi.org/project/pipenv/
-[urldry]: https://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself
-[urlcleancode]: https://de.wikipedia.org/wiki/Clean_Code
-[urltestdrivendev]: https://en.wikipedia.org/wiki/Test-driven_development
-
-[urlimports1]: https://docs.python.org/3/reference/import.html
-[urlimports2]: https://realpython.com/python-import/
-
-
-[urlcookiecutter]: https://github.com/cookiecutter/cookiecutter
-[urlcookiecutterpypackage]: https://github.com/audreyfeldroy/cookiecutter-pypackage
-
-[urlatomblack]: https://atom.io/packages/atom-black
-
-[urlnumpy]: https://github.com/numpy/numpy
-[urlscipy]: https://github.com/scipy/scipy
-[urlsympy]: https://github.com/sympy/sympy
-[urlfiberoripy]: https://github.com/nilsmeyerkit/fiberoripy
-[urlmechkit]: https://github.com/JulianKarlBauer/mechkit
-
-[urlscikitlearn]: https://github.com/scikit-learn/scikit-learn/tree/main
-[urlastropy]: https://github.com/astropy/astropy/tree/main
-
-[urlmetaresearch]: https://github.com/orgs/facebookresearch/repositories
-
-[urlmeshio]: https://github.com/nschloe/meshio/
-[urlmeshzoo]: https://github.com/nschloe/meshzoo
-
-[urlfairdfg]: https://www.dfg.de/download/pdf/foerderung/rechtliche_rahmenbedingungen/gute_wissenschaftliche_praxis/kodex_gwp_en.pdf
-[urlfairdatazenodo]:https://about.zenodo.org/principles/
-[urlfairsoftwarecern]: https://indico.cern.ch/event/588219/contributions/2384979/attachments/1426152/2189855/FAIR_Software_Principles_CERN_March_2017.pdf
-[urlpythonpackages]: https://packaging.python.org/tutorials/packaging-projects/
-[urlpythonpackagehitchiker]: https://docs.python-guide.org/writing/structure/
