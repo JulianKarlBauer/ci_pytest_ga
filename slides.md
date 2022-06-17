@@ -114,18 +114,40 @@ How do we get it?
 
 $\quad\quad\quad\quad$  ![][fig_github_login]
 
+
+
 [url_github]: https://github.com/
 [fig_github_login]: images/github_login.png { width=8cm }
 
 
+# Exercise 1: Create a new Git repository
 
-# Exercise 1: Git Project
-Start a new Git-versioned project and clone it to your local machine
+::: columns
 
-- Create your personal new blank Git project in the sub-group
-<https://git.scc.kit.edu/IRTG2078/workshop_thomashof_2021>
-- Clone the project to your local machine using, e.g.,
- `git clone ...`
+:::: {.column width=0.4}
+Go to [Github][url_github] and create a new repository with
+
+- Repository name: workshop_ci_pytest
+- - [x] Public
+- - [x] Add a README file
+- .gitignore: Python
+- License: None
+
+::::
+
+:::: {.column width=0.5}
+
+![][fig_new_repo]
+
+::::
+
+:::
+
+[fig_new_repo]: images/new_repo.png { width=8cm }
+
+
+
+
 
 # Python (Virtual) Environments
 
