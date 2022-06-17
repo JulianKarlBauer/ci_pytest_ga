@@ -586,8 +586,8 @@ def test_add(x, y, result):
 - Create and use [artefacts](https://github.com/actions/upload-artifact)
 - [Compile Latex documents](https://github.com/dante-ev/latex-action)
 - [Test Jupyter notebooks](https://semaphoreci.com/blog/test-jupyter-notebooks-with-pytest-and-nbmake)
+- Include Pytest into a Python Package Project Structure with `setup.py`
 - [Publish Python Package to PyPi](https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/)
-- Include Pytest into a Python Package Project Structure
 
 
 
