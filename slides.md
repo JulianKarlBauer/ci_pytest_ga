@@ -112,8 +112,10 @@ How do we get it?
 - If you already have a Github account, please log in.
 - If you do not have a Github account yet, please get yourself one by signing up
 
-![][fig_github_login]
+$\quad\quad\quad\quad$  ![][fig_github_login]
 
+[url_github]: https://github.com/
+[fig_github_login]: images/github_login.png { width=8cm }
 
 
 
@@ -909,12 +911,13 @@ git diff .
 [figThankYou]: latexRessources/thank_you_slide.png
 [fig_motivation_changes_nm]: images/motivation_changes_nm.png { width=14cm }
 [fig_pytest_logo]: images/pytest.png { width=4cm }
-[fig_github_login]: images/github_login.png { width=10cm }
+
+
 
 
 [url_thesoftwarecarpentries]: https://software-carpentry.org/
 [url_pytest]: https://docs.pytest.org/en/latest/
-[url_github]: https://github.com/
+
 
 
 
