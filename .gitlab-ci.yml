@@ -1,6 +1,5 @@
 stages:
   - build
-  - test
 
 slides:
     stage: build
@@ -13,13 +12,5 @@ slides:
         paths:
         - ./slides.pdf
 
-test_3.9:
-    stage: test
-    image: "python:3.9"
-    script:
-        - cd cooperative_python_coding
-        - python setup.py install
-        - pip install pytest
-        - pytest --verbose
 
 
