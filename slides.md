@@ -469,7 +469,7 @@ workshop_ci_pytest
 name: Unit Tests
 on: [push]
 jobs:
-  Clone:
+  Run_Pytest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3 # Make repo available
@@ -482,6 +482,67 @@ jobs:
 ::::
 
 :::
+
+
+# Exercise 8: Run Pytest: Multiple Python Version
+
+Create a workflow which runs `pytest` against the current repository state
+using multiple Python versions.
+
+::: columns
+
+:::: {.column width=0.35}
+```
+workshop_ci_pytest
+└───.github
+|   └───workflows
+|       | ...
+|       | pytest_multi.yml
+|
+│   README.md
+| ...
+```
+::::
+
+:::: {.column width=0.55}
+### `pytest_multi.yml`
+
+\tiny
+```yaml
+name: Unit Tests Multiple Python Versions
+on: [push]
+jobs:
+  Run_Pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Package
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest
+    - name: Test with pytest against local files
+      run: |
+        python -m pytest
+```
+
+::::
+
+:::
+
+
+# Exercise 8: Inspect Matrix Exection
+
+![][fig_github_actions_pytest_multiple]
+
+[fig_github_actions_pytest_multiple]: images/github_actions_pytest_multiple.png { width=14cm }
+
 
 
 
