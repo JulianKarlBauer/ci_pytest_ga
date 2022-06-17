@@ -387,6 +387,23 @@ you can also instruct a skilled user and your future-self.
 [url_gitlab_runner]: https://docs.gitlab.com/runner/
 
 
+# YAML Ain't Markup Language™
+
+What is YAML?
+
+- YAML is a human-friendly data serialization language for all programming languages.
+- It is commonly used for configuration files and in applications where text data is being stored or transmitted.
+
+&nbsp;
+
+Where can I learn more about it?
+
+- [Comprehension](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
+- [The official website](https://yaml.org/)
+- [Specification](https://yaml.org/spec/1.2.2/)
+
+
+
 # Exercise 5: Hello World in Github Actions
 
 Print "Hello World" to the Github actions terminal.
