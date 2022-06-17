@@ -18,6 +18,21 @@ classoption: "aspectratio=169"
 urlcolor: brown
 ---
 
+# Live Coding and Code of Conduct
+
+We will solve exercises together by simultaneous live-coding.  
+You will see my screen and you are encouraged to follow the steps on your local machine.
+
+**Code of Conduct** following the [Software Carpentries][url_thesoftwarecarpentries]
+
+- "Use welcoming and inclusive language
+- Be respectful of different viewpoints and experiences
+- Gracefully accept constructive criticism
+- Focus on what is best for the community
+- Show courtesy and respect towards other community members"[^notecarpentriescodeofconduct]
+
+[^notecarpentriescodeofconduct]: <https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html>
+
 
 
 # Motivation
@@ -826,7 +841,7 @@ git diff .
 [figccookie_out]: images/cookie_out.png { height=5.5cm }
 
 [condacheatsheet]: https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf
-[thesoftwarecarpentries]: https://software-carpentry.org/
+[url_thesoftwarecarpentries]: https://software-carpentry.org/
 [pytest]: https://docs.pytest.org/en/6.2.x/
 [pytestfixtures]: https://docs.pytest.org/en/6.2.x/fixture.html
 [unittests_tests_that_last]: https://osherove.com/blog/2007/9/13/throw-away-tests-vs-tests-that-last.html
