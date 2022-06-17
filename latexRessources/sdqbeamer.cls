@@ -271,7 +271,7 @@
 \def\titleimage#1{\def\@titleimage{#1}}
 \def\grouplogo#1{\def\@grouplogo{#1}}
 
-\titleimage{title_page_logos}
+\titleimage{Continous_Delivery_Test_Strategy_parts}
 \newlength{\mytitleimageheight}
 \setlength{\mytitleimageheight}{35mm}
 
