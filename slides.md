@@ -20,8 +20,8 @@ urlcolor: brown
 
 # Live Coding and Code of Conduct
 
-We will solve exercises together by simultaneous live-coding.  
-You will see my screen and you are encouraged to follow the steps on your local machine.
+Throughout this workshop, we will solve exercises together by simultaneous live-coding.  
+You see my screen and are encouraged to follow the steps on your local machine.  
 
 **Code of Conduct** following the [Software Carpentries][url_the_software_carpentries]
 
@@ -537,7 +537,9 @@ jobs:
 :::
 
 
-# Exercise 8: Inspect Matrix Exection
+# Exercise 8: Inspect Matrix Execution
+
+Inspect the Summary of matrix executions.
 
 ![][fig_github_actions_pytest_multiple]
 
