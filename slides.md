@@ -125,7 +125,7 @@ $\quad\quad\quad\quad$  ![][fig_github_login]
 ::: columns
 
 :::: {.column width=0.4}
-Go to [Github][url_github] and create a new repository with
+On [Github][url_github], create a new repository with
 
 - Repository name: workshop_ci_pytest
 - - [x] Public
