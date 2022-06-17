@@ -1,7 +1,7 @@
 ---
-title: "Continuous-Integration with Github"
-subtitle: "Unit Tests with Pytest"
-author: Julian Karl Bauer following Nils Meyer
+title: "Continuous-Integration with Github: Unit Tests with Pytest"
+subtitle: "Motivated by and largely based on \"Introduction to automated testing\" by Nils Meyer"
+author: Julian Karl Bauer
 date: 22.06.2022
 
 documentclass: latexRessources/sdqbeamer
