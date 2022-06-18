@@ -486,8 +486,62 @@ jobs:
 
 :::
 
+# Exercise 8: Break the Code
 
-# Exercise 8: Parametrize `functions.add()`
+Manipulate the test of `functions.add()` to raise an `Assertion Error` which breaks the test.
+
+::: columns
+
+:::: {.column width=0.3}
+```
+workshop_ci_pytest
+└───.github
+|   └───workflows
+|       | pytest.yml
+|
+│   functions.py
+|
+└───test
+│    │   test_functions.py
+```
+::::
+
+:::: {.column width=0.6}
+### `functions.yml`
+
+```python
+def add(x, y):
+    return x + y + 1
+```
+
+::::
+
+:::
+
+
+
+# Exercise 8: Break the Code (Inspection)
+
+::: columns
+
+:::: {.column width=0.5}
+
+![][fig_broken_test]
+::::
+
+:::: {.column width=0.5}
+
+![][fig_broken_test_pytest]
+
+::::
+
+:::
+
+
+
+
+
+# Exercise 9: Parametrize `functions.add()`
 
 Try to run one test against multiple expectations without introducing redundancy.
 
@@ -532,7 +586,7 @@ def test_add(x, y, result):
 - Use any pre-build container from [dockerhub](https://hub.docker.com/) or build your own (ask Nils / FAST)
 
 
-# Exercise 9: Run Pytest: Multiple Python Version
+# Exercise 10: Run Pytest: Multiple Python Version
 
 Create a workflow which runs `pytest` against the current repository state
 using multiple Python versions.
@@ -585,14 +639,14 @@ jobs:
 :::
 
 
-# Exercise 9: Inspect Matrix Execution
+# Exercise 10: Inspect Matrix Execution
 
 Inspect the Summary of matrix executions.
 
 ![][fig_github_actions_pytest_multiple]
 
 
-# Exercise 10: Combinations of OS and Versions
+# Exercise 11: Combinations of OS and Versions
 
 Create a workflow which echos combinations of operating systems (OS) combinations and version specifiers.
 
@@ -648,7 +702,7 @@ jobs:
 - Automate rending process of simple papers: Example [JOSS](https://joss.theoj.org/)
 
 
-# Exercise 11: Open Journal Paper Build
+# Exercise 12: Open Journal Paper Build
 
 ::: columns
 
@@ -696,7 +750,7 @@ jobs:
 
 :::
 
-# Exercise 11: Open Journal Paper Build
+# Exercise 12: Open Journal Paper Build
 
 ::: columns
 
@@ -758,7 +812,7 @@ text `text` **text** *text*
 :::
 
 
-# Exercise 11: Open Journal Paper Build
+# Exercise 12: Open Journal Paper Build
 
 ::: columns
 :::: {.column width=0.55}
@@ -791,6 +845,10 @@ $\quad\quad\quad\quad$
 [fig_output_parametrize_test_functions]: images/output_parametrize_test_functions.png { width=7cm }
 [fig_artefact_download]: images/artefact_download.png { width=10cm }
 [fig_paper_view]: images/paper_view.png { width=3.7cm }
+[fig_broken_test]: images/broken_test.png { width=7cm }
+[fig_broken_test_pytest]: images/broken_test_pytest.png { width=7cm }
+
+
 
 
 
