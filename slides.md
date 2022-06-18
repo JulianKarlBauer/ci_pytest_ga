@@ -519,6 +519,18 @@ def test_add(x, y, result):
 
 :::
 
+# Learn More on [Github Actions][url_github_actions]
+
+![][fig_github_actions_features]
+
+
+# More on [Github Actions][url_github_actions]
+
+- [Reusing](https://docs.github.com/en/actions/using-workflows/reusing-workflows) workflows with secrets and access token ([video](https://www.youtube.com/watch?v=lRypYtmbKMs))
+- Community driven workflow sharing (tested and debugged)
+    - [Python example](https://github.com/actions/setup-python)
+    - [Latex example](https://github.com/marketplace/actions/github-action-for-latex)
+- Use any pre-build container from [dockerhub](https://hub.docker.com/) or build your own (ask Nils / FAST)
 
 
 # Exercise 9: Run Pytest: Multiple Python Version
@@ -581,10 +593,6 @@ Inspect the Summary of matrix executions.
 ![][fig_github_actions_pytest_multiple]
 
 
-# Learn More on [Github Actions][url_github_actions]
-
-![][fig_github_actions_features]
-
 # Exercise 10: Combinations of OS and Versions
 
 Create a workflow which echos combinations of operating systems (OS) combinations and version specifiers.
@@ -637,6 +645,8 @@ jobs:
 - [Test Jupyter notebooks](https://semaphoreci.com/blog/test-jupyter-notebooks-with-pytest-and-nbmake)
 - Include Pytest into a Python Package Project Structure with `setup.py`
 - [Publish Python Package to PyPi](https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/)
+- Think towards a unified Git-based interface for scientific papers
+- Automate rending process of simple papers: Example [JOSS](https://joss.theoj.org/)
 
 
 # Exercise 11: Open Journal Paper Build
