@@ -690,6 +690,53 @@ jobs:
 :::
 
 
+# Exercise 12: Store Artefact
+
+During CI-execution, create a file and keep it.
+
+<!-- &nbsp; -->
+
+::: columns
+
+:::: {.column width=0.24}
+\scriptsize
+```
+workshop_ci_pytest
+└───.github
+|   └───workflows
+|       | ...
+|       | print_to_file.yml
+|
+│   README.md
+| ...
+```
+::::
+
+:::: {.column width=0.69}
+### `print_to_file.yml`
+
+\small
+```yaml
+name: Hello World
+on: [push]
+jobs:
+  Print_Hello_World:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo "# Hello World" >> tmp.md
+      - name: Upload
+        uses: actions/upload-artifact@v1
+        with:
+          name: tmp
+          path: tmp.md
+```
+
+::::
+
+:::
+
+
 # More CI Topics
 
 - Create and use [artefacts](https://github.com/actions/upload-artifact)
