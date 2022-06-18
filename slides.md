@@ -690,7 +690,7 @@ jobs:
 :::
 
 
-# Exercise 12: Store Artefact
+# Exercise 12: Store Artifact
 
 During CI-execution, create a file and keep it.
 
@@ -736,6 +736,72 @@ jobs:
 
 :::
 
+# Exercise 13: Store Plot as Artifact
+
+From within Python plot to a file and store it as artifact.
+
+<!-- &nbsp; -->
+
+::: columns
+
+:::: {.column width=0.23}
+\scriptsize
+```
+workshop_ci_pytest
+└───.github
+|   └───workflows
+|       | ...
+|       | plot_and_store.yml
+|
+│   README.md
+|   plot.py
+| ...
+```
+::::
+
+:::: {.column width=0.32}
+### `plot.py`
+\small
+```python
+import matplotlib.pyplot as plt
+from functions import add
+x = list(range(10))
+y = add(x, x)
+
+plt.plot(x, y)
+plt.savefig("plot.png")
+```
+
+::::
+
+:::: {.column width=0.32}
+### `plot_and_store.yml`
+\scriptsize
+```yaml
+name: Plot and Store
+on: [push]
+jobs:
+  Plot_and_Store:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Packages
+        run: |
+            pip install numpy
+            pip install matplotlib
+      - name: Plot
+        run: python plot.py
+      - name: Upload
+        uses: actions/upload-artifact@v1
+        with:
+          name: Plot
+          path: plot.png
+```
+
+::::
+
+:::
+
 
 # More CI Topics
 
@@ -748,7 +814,7 @@ jobs:
 - Automate rending process of simple papers: Example [JOSS](https://joss.theoj.org/)
 
 
-# Exercise 13: Open Journal Paper Build
+# Exercise 14: Open Journal Paper Build
 
 ::: columns
 
@@ -796,7 +862,7 @@ jobs:
 
 :::
 
-# Exercise 13: Open Journal Paper Build
+# Exercise 14: Open Journal Paper Build
 
 ::: columns
 
@@ -858,7 +924,7 @@ text `text` **text** *text*
 :::
 
 
-# Exercise 13: Open Journal Paper Build
+# Exercise 14: Open Journal Paper Build
 
 ::: columns
 :::: {.column width=0.55}
