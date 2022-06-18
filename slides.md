@@ -724,7 +724,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print
-        run: echo "# Hello World" >> tmp.md
+        run: echo "Hello World" >> tmp.md
       - name: Upload
         uses: actions/upload-artifact@v1
         with:
