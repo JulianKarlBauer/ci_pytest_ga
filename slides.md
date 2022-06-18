@@ -43,6 +43,10 @@ $\quad\quad\quad\quad$  ![][fig_hackmd]
 
 [fig_hackmd]: images/hackmd.png { width=8cm }
 
+# Motivation
+
+![Avoid breaking things (© Nils Meyer)][fig_motivation_changes_nm_partly]
+
 
 # Motivation
 
@@ -765,6 +769,7 @@ $\quad\quad\quad\quad$
 
 [fig_Thank_You]: latexRessources/thank_you_slide.png
 [fig_motivation_changes_nm]: images/motivation_changes_nm.png { width=14cm }
+[fig_motivation_changes_nm_partly]: images/motivation_changes_nm_partly.png { width=14cm }
 [fig_pytest_logo]: images/pytest.png { width=4cm }
 [fig_github_login]: images/github_login.png { width=8cm }
 [fig_new_repo]: images/new_repo.png { width=8cm }
