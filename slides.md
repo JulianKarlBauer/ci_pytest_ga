@@ -668,7 +668,7 @@ workshop_ci_pytest
 ::::
 
 :::: {.column width=0.69}
-### `pytest_multi.yml`
+### `os_version_matrix.yml`
 
 \small
 ```yaml
