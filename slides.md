@@ -488,7 +488,40 @@ jobs:
 :::
 
 
-# Exercise 8: Run Pytest: Multiple Python Version
+# Exercise 8: Parametrize `functions.add()`
+
+Try to run one test against multiple expectations without introducing redundancy.
+
+&nbsp;
+
+::: columns
+
+:::: {.column width=0.45}
+### `test_functions.py`
+
+```python
+from functions import add
+import pytest
+
+@pytest.mark.parametrize(
+    "x, y, result", [(1,2,3), (3,4,7)]
+    )
+def test_add(x, y, result):
+    assert add(x, y) == result
+```
+::::
+
+:::: {.column width=0.45}
+
+![][fig_output_parametrize_test_functions]
+
+::::
+
+:::
+
+
+
+# Exercise 9: Run Pytest: Multiple Python Version
 
 Create a workflow which runs `pytest` against the current repository state
 using multiple Python versions.
@@ -541,7 +574,7 @@ jobs:
 :::
 
 
-# Exercise 8: Inspect Matrix Execution
+# Exercise 9: Inspect Matrix Execution
 
 Inspect the Summary of matrix executions.
 
@@ -551,38 +584,6 @@ Inspect the Summary of matrix executions.
 # Learn More on [Github Actions][url_github_actions]
 
 ![][fig_github_actions_features]
-
-
-# Exercise 9: Parametrize `functions.add()`
-
-Try to run one test against multiple expectations without introducing redundancy.
-
-&nbsp;
-
-::: columns
-
-:::: {.column width=0.45}
-### `test_functions.py`
-
-```python
-from functions import add
-import pytest
-
-@pytest.mark.parametrize(
-    "x, y, result", [(1,2,3), (3,4,7)]
-    )
-def test_add(x, y, result):
-    assert add(x, y) == result
-```
-::::
-
-:::: {.column width=0.45}
-
-![][fig_output_parametrize_test_functions]
-
-::::
-
-:::
 
 # Exercise 10: Combinations of OS and Versions
 
