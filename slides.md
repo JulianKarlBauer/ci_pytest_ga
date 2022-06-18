@@ -748,7 +748,7 @@ jobs:
 - Automate rending process of simple papers: Example [JOSS](https://joss.theoj.org/)
 
 
-# Exercise 12: Open Journal Paper Build
+# Exercise 13: Open Journal Paper Build
 
 ::: columns
 
@@ -796,7 +796,7 @@ jobs:
 
 :::
 
-# Exercise 12: Open Journal Paper Build
+# Exercise 13: Open Journal Paper Build
 
 ::: columns
 
@@ -858,7 +858,7 @@ text `text` **text** *text*
 :::
 
 
-# Exercise 12: Open Journal Paper Build
+# Exercise 13: Open Journal Paper Build
 
 ::: columns
 :::: {.column width=0.55}
