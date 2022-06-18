@@ -625,13 +625,12 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install Package
+    - name: Install Pytest
       run: |
         python -m pip install --upgrade pip
         pip install pytest
     - name: Test with pytest against local files
-      run: |
-        python -m pytest
+      run: python -m pytest
 ```
 
 ::::
