@@ -271,7 +271,7 @@
 \def\titleimage#1{\def\@titleimage{#1}}
 \def\grouplogo#1{\def\@grouplogo{#1}}
 
-\titleimage{Continous_Delivery_Test_Strategy_parts}
+\titleimage{}
 \newlength{\mytitleimageheight}
 \setlength{\mytitleimageheight}{35mm}
 
@@ -328,42 +328,6 @@
   % Autor
   \begin{textblock*}{\dimexpr\paperwidth-8mm\relax}(\kitinnermargin,41mm)
   \small\insertauthor~\textbar~\insertdate
-  \end{textblock*}
-
-  % Titelbild
-  \newlength{\kittitleimageheight}
-  \setlength{\kittitleimageheight}{40mm}
-  \begin{textblock*}{\paperwidth}(\kitoutermargin,\dimexpr\paperheight-\kitbottommargin-\kittitleimageheight)
-  \begin{pgfpicture}{0mm}{0mm}{\paperwidth}{\kittitleimageheight}
-    % Clipping-Pfad um titelbild
-    \pgfsetstrokecolor{black!15}
-    \pgfsetlinewidth{1pt}
-    \pgfsetcornersarced{\pgfpoint{3mm}{3mm}}
-    \pgfpathmoveto{\pgfpoint{\paperwidth-2\kitoutermargin}{0mm}}
-    \pgfpathlineto{\pgfpoint{\paperwidth-2\kitoutermargin}{\kittitleimageheight}}
-    \pgfsetcornersarced{\pgfpointorigin}
-    \pgfpathlineto{\pgfpoint{0mm}{\kittitleimageheight}}
-    \pgfsetcornersarced{\pgfpoint{3mm}{3mm}}
-    \pgfpathlineto{\pgfpointorigin}
-    \pgfsetcornersarced{\pgfpointorigin}
-    \pgfpathclose
-    \pgfusepath{stroke,clip}
-
-    % Titelbild
-    \ifdefined\@titleimage
-      \ifx\@titleimage\empty \else%
-        \pgftext[at=\pgfpoint{.5\paperwidth}{0mm},center,bottom]{%
-          \includegraphics[height=\mytitleimageheight]{latexRessources/\@titleimage}
-        }
-        \fi % Bei Aufruf von \titleimage{} leeren Rahmen anzeigen.
-      \else
-        \pgftext[at=\pgfpoint{.5\paperwidth}{.5\kittitleimageheight},center,base]{%
-          \colorbox{kit-purple100!20}{\parbox[c][\kittitleimageheight][c]{\paperwidth}{\color{kit-purple100}\centering Bitte Titelbild über \texttt{\textbackslash titleimage\{\}} festlegen.
-          }}%
-        }
-    \fi
-  \end{pgfpicture}%
-
   \end{textblock*}
 
 
