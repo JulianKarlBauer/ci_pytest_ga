@@ -2,21 +2,17 @@ name: Build slides with pandoc
 
 on: push
 
-jobs:
-  convert_via_pandoc:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
 
-      - uses: docker://pandoc/latex:2.9
-        with:
-          args: >-
-            -t beamer
-            --pdf-engine=xelatex
-            --highlight-style=kate
-            slides.md
-            -o slides.pdf
-          
+jobs:
+  use_pandoc:
+    runs-on: ubuntu-latest
+    container:
+      image: aergus/latex
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: make
+
       - uses: actions/upload-artifact@master
         with:
           name: slides
