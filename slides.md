@@ -76,6 +76,14 @@ When do we need it?
 - Deployment for end users which do random stuff
 - Always - at least, if we are interested in successful long-term projects -
 
+
+&nbsp;
+
+Are tests important?
+
+- [Do][url_unit_tests_throw_away] / [Don't][url_unit_tests_that_last] throw away tests
+ ([discussion][url_unit_tests_discussion])
+- [Test-driven development][url_test_driven_dev]
 ::::
 
 :::
@@ -291,46 +299,6 @@ If you would like to use Pytest on your local machine, please
 
 
 
-# Tests in the Python Project Structure
-
-::: columns
-
-:::: {.column width=0.55}
-
-- The Python project structure contains a directory named `test`.
-- Inside this `test` directory, (unit) tests can be structured in files, classes and functions.
-- Files, classes and functions which contain tests have to follow a naming convention and should start with the prefix `test`.
-- Helper functions and [fixtures][url_pytest_fixtures] can be used to parameterize tests and keep the
-test code dry.
-
-&nbsp;
-
-- [Do][url_unit_tests_throw_away] / [Don't][url_unit_tests_that_last] throw away tests
- ([discussion][url_unit_tests_discussion])
-- [Test-driven development][url_test_driven_dev]
-
-::::
-
-:::: {.column width=0.35}
-```
-project_name
-│   README.md
-│   setup.py
-│
-└───package_name
-│    │   __init__.py
-│    │   module_name_1.py
-│    │   module_name_2.py
-|
-└───test
-│    │   test_module_name_1.py
-│    │   test_module_name_2.py
-```
-::::
-
-:::
-
-
 # Python Project Structure
 
 \small
@@ -398,6 +366,46 @@ setuptools.setup(
   install_requires=[],
   ...
 )
+```
+::::
+
+:::
+
+
+# Tests in the Python Project Structure
+
+::: columns
+
+:::: {.column width=0.55}
+
+- The Python project structure contains a directory named `test`.
+- Inside this `test` directory, (unit) tests can be structured in files, classes and functions.
+- Files, classes and functions which contain tests have to follow a naming convention and should start with the prefix `test`.
+- Helper functions and [fixtures][url_pytest_fixtures] can be used to parameterize tests and keep the
+test code dry.
+
+<!-- &nbsp;
+
+- [Do][url_unit_tests_throw_away] / [Don't][url_unit_tests_that_last] throw away tests
+ ([discussion][url_unit_tests_discussion])
+- [Test-driven development][url_test_driven_dev] -->
+
+::::
+
+:::: {.column width=0.35}
+```
+project_name
+│   README.md
+│   setup.py
+│
+└───package_name
+│    │   __init__.py
+│    │   module_name_1.py
+│    │   module_name_2.py
+|
+└───test
+│    │   test_module_name_1.py
+│    │   test_module_name_2.py
 ```
 ::::
 
