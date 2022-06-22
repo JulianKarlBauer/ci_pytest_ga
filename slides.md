@@ -1031,11 +1031,15 @@ $\quad\quad\quad\quad$
 
 
 # Thank You for Your Attention
-![fig_Thank_You] \
+
+The research documented in this presentation has been funded by the German Research Foundation (DFG, Deutsche Forschungsgemeinschaft) - project number 255730231.
+
+The support by the German Research Foundation within the International Research Training Group “Integrated engineering of continuous-discontinuous long fiber reinforced polymer structures“ [(GRK 2078)](https://www.grk2078.kit.edu/) is gratefully acknowledged.
+
+![fig_thank_you_logos] \
 
 
-
-[fig_Thank_You]: latexRessources/thank_you_slide.png
+[fig_thank_you_logos]: latexRessources/thank_you_logos.png
 [fig_motivation_changes_nm]: images/motivation_changes_nm.png { width=14cm }
 [fig_motivation_changes_nm_partly]: images/motivation_changes_nm_partly.png { width=14cm }
 [fig_pytest_logo]: images/pytest.png { width=4cm }
