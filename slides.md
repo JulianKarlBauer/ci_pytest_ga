@@ -356,17 +356,6 @@ workshop_ci_pytest
 :::: {.column width=0.3}
 \footnotesize
 
-### `my_script.py`
-
-```python
-import my_package
-
-sum = my_package.my_module.add(
-        x=3, y=4)
-
-print(f"3+4={sum}")
-```
-
 ### `my_package/__init__.py`
 
 ```python
@@ -378,6 +367,17 @@ from . import my_module
 ```python
 def add(x, y):
     return x + y
+```
+
+### `my_script.py`
+
+```python
+import my_package
+
+sum = my_package.my_module.add(
+        x=3, y=4)
+
+print(f"3+4={sum}")
 ```
 ::::
 
