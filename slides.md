@@ -81,7 +81,7 @@ When do we need it?
 :::
 
 
-# More on Tests
+# What is a Test?
 
 A test is a procedure which prepares and performs a comparison.
 
