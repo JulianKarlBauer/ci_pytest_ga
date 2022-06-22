@@ -331,6 +331,80 @@ project_name
 :::
 
 
+# Python Project Structure
+
+\small
+::: columns
+
+:::: {.column width=0.3}
+```
+workshop_ci_pytest
+│   README.md
+|   my_script.py
+|   setup.py
+│   
+└───my_package
+│    │   __init__.py
+│    │   my_module.py
+|
+└───test
+|    |   test_my_module.py
+```
+
+::::
+
+:::: {.column width=0.3}
+\footnotesize
+
+### `my_script.py`
+
+```python
+import my_package
+
+sum = my_package.my_module.add(
+        x=3, y=4)
+
+print(f"3+4={sum}")
+```
+
+### `my_package/__init__.py`
+
+```python
+from . import my_module
+```
+
+### `my_package/my_module.py`
+
+```python
+def add(x, y):
+    return x + y
+```
+::::
+
+:::: {.column width=0.3}
+\footnotesize
+### `setup.py`
+
+```python
+import setuptools
+
+setuptools.setup(
+  name="my_package",
+  version="0.0.1",
+  author="Julian Karl Bauer",
+  author_email="...",
+  description="Addition",
+  packages=["my_package"],
+  install_requires=[],
+  ...
+)
+```
+::::
+
+:::
+
+
+
 # Automate Tests
 
 ![© Nils Meyer][fig_motivation_changes_nm]
