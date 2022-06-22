@@ -654,10 +654,6 @@ def test_add(x, y, result):
 
 :::
 
-# Learn More on [Github Actions][url_github_actions]
-
-![][fig_github_actions_features]
-
 
 # More on [Github Actions][url_github_actions]
 
@@ -884,10 +880,13 @@ jobs:
 
 :::
 
+# Learn More on [Github Actions][url_github_actions]
+
+![][fig_github_actions_features]
 
 # More CI Topics
 
-- Create and use [artefacts](https://github.com/actions/upload-artifact)
+ Create and use [artifacts](https://github.com/actions/upload-artifact)
 - Make artifacts [available by link](https://nightly.link/)
 - [Compile Latex documents](https://github.com/dante-ev/latex-action)
 - [Use docker images from docker hub within Github actions](https://stackoverflow.com/questions/72684160/use-docker-hub-image-in-github-actions-running-on-github-hosted-runners)
@@ -1012,7 +1011,7 @@ text `text` **text** *text*
 
 ::: columns
 :::: {.column width=0.55}
-![][fig_artefact_download]
+![][fig_artifact_download]
 ::::
 :::: {.column width=0.35}
 $\quad\quad\quad\quad$
@@ -1048,7 +1047,7 @@ $\quad\quad\quad\quad$
 [fig_github_actions_pytest_multiple]: images/github_actions_pytest_multiple.png { width=14cm }
 [fig_github_actions_features]: images/github_actions_features.png { width=12cm }
 [fig_output_parametrize_test_functions]: images/output_parametrize_test_functions.png { width=7cm }
-[fig_artefact_download]: images/artefact_download.png { width=10cm }
+[fig_artifact_download]: images/artifact_download.png { width=10cm }
 [fig_paper_view]: images/paper_view.png { width=3.7cm }
 [fig_broken_test]: images/broken_test.png { width=7cm }
 [fig_broken_test_pytest]: images/broken_test_pytest.png { width=7cm }
