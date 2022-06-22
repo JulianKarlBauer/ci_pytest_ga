@@ -488,7 +488,7 @@ jobs:
 
 # Exercise 8: Break the Code
 
-Manipulate the test of `functions.add()` to raise an `Assertion Error` which breaks the test.
+Manipulate the function `add()` to raise an `Assertion Error` which breaks the test.
 
 ::: columns
 
