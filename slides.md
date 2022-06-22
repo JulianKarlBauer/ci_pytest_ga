@@ -240,27 +240,6 @@ python -m pytest
 ```
 
 
-# Running Pytest
-
-- [Pytest][url_pytest] can be executed from the command line either
-  - as a command by **pytest**
-  - or as a Python package by **python -m pytest**
-
-&nbsp;
-
-- Execution as a Python package
-  adds the current working directory of the terminal
-  to the Python path which is used during the pytest run.
-  In consequence, import-precedence
-  leads to an import of the local source code, if present.
-
-&nbsp;
-
-- Within a Python project structure, run tests
-  - against an installed package with **pytest** (recommended) or
-  - against local files with **python -m pytest**.
-
-
 # Exercise 2: (Optional) Clone Repository, Install pytest
 
 ::: columns
@@ -288,6 +267,27 @@ If you would like to use Pytest on your local machine, please
 ::::
 
 :::
+
+
+# Running Pytest
+
+- [Pytest][url_pytest] can be executed from the command line either
+  - as a command by **pytest**
+  - or as a Python package by **python -m pytest**
+
+&nbsp;
+
+- Execution as a Python package
+  adds the current working directory of the terminal
+  to the Python path which is used during the pytest run.
+  In consequence, import-precedence
+  leads to an import of the local source code, if present.
+
+&nbsp;
+
+- Within a Python project structure, run tests
+  - against an installed package with **pytest** (recommended) or
+  - against local files with **python -m pytest**.
 
 
 
