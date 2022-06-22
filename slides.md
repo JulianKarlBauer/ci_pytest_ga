@@ -886,7 +886,7 @@ jobs:
 
 # More CI Topics
 
- Create and use [artifacts](https://github.com/actions/upload-artifact)
+- Create and use [artifacts](https://github.com/actions/upload-artifact)
 - Make artifacts [available by link](https://nightly.link/)
 - [Compile Latex documents](https://github.com/dante-ev/latex-action)
 - [Use docker images from docker hub within Github actions](https://stackoverflow.com/questions/72684160/use-docker-hub-image-in-github-actions-running-on-github-hosted-runners)
