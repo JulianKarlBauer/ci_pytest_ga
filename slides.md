@@ -888,6 +888,7 @@ jobs:
 # More CI Topics
 
 - Create and use [artefacts](https://github.com/actions/upload-artifact)
+- Make artifacts [available by link](https://nightly.link/)
 - [Compile Latex documents](https://github.com/dante-ev/latex-action)
 - [Use docker images from docker hub within Github actions](https://stackoverflow.com/questions/72684160/use-docker-hub-image-in-github-actions-running-on-github-hosted-runners)
 - [Test Jupyter notebooks](https://semaphoreci.com/blog/test-jupyter-notebooks-with-pytest-and-nbmake)
@@ -1019,6 +1020,15 @@ $\quad\quad\quad\quad$
 ::::
 :::
 
+
+# Summary
+- Motivate unit tests
+- `pytest` for unit tests in Python
+- Motivate Continuous Integration (CI)
+- Do CI with Github actions
+- Learn basic YAML syntax by using it
+- Parametrize pytests
+- Create and upload artifacts
 
 
 # Thank You for Your Attention
